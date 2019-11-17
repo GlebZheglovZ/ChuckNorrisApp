@@ -20,7 +20,6 @@
 		54A0BF02238196D2007DB769 /* JokesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BF01238196D2007DB769 /* JokesModel.swift */; };
 		54A0BF0423819738007DB769 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BF0323819738007DB769 /* NetworkManger.swift */; };
 		54A0BF0623819FFE007DB769 /* Extension for String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BF0523819FFE007DB769 /* Extension for String.swift */; };
-		54B128212381A4F9001DC3D5 /* Extension for StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B128202381A4F9001DC3D5 /* Extension for StackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +38,6 @@
 		54A0BF01238196D2007DB769 /* JokesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesModel.swift; sourceTree = "<group>"; };
 		54A0BF0323819738007DB769 /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
 		54A0BF0523819FFE007DB769 /* Extension for String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension for String.swift"; sourceTree = "<group>"; };
-		54B128202381A4F9001DC3D5 /* Extension for StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension for StackView.swift"; sourceTree = "<group>"; };
 		72CCF4A63A17DEFF41A982C1 /* Pods-ChuckNorrisApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisApp.release.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisApp/Pods-ChuckNorrisApp.release.xcconfig"; sourceTree = "<group>"; };
 		FDA01178A1D7C22B60FAD0A3 /* Pods_ChuckNorrisApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckNorrisApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -69,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				54A0BF0523819FFE007DB769 /* Extension for String.swift */,
-				54B128202381A4F9001DC3D5 /* Extension for StackView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -294,7 +291,6 @@
 			files = (
 				54A0BF0623819FFE007DB769 /* Extension for String.swift in Sources */,
 				54A0BF02238196D2007DB769 /* JokesModel.swift in Sources */,
-				54B128212381A4F9001DC3D5 /* Extension for StackView.swift in Sources */,
 				54644211237FF23F0070971F /* JokesViewController.swift in Sources */,
 				54A0BF0423819738007DB769 /* NetworkManger.swift in Sources */,
 				540F075C238193DE0010643D /* BrowserViewController.swift in Sources */,

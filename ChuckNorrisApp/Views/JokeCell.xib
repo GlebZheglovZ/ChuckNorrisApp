@@ -17,6 +17,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UCy-Q9-miX">
+                        <rect key="frame" x="8" y="8" width="304" height="84"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cjB-mr-Hdo">
                         <rect key="frame" x="8" y="8" width="304" height="84"/>
                         <subviews>
@@ -36,14 +40,19 @@
                     </stackView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="UCy-Q9-miX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="8Dq-09-E5C"/>
+                    <constraint firstItem="UCy-Q9-miX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="JOm-qf-NcA"/>
                     <constraint firstAttribute="trailing" secondItem="cjB-mr-Hdo" secondAttribute="trailing" constant="8" id="cBH-QN-HR2"/>
                     <constraint firstItem="cjB-mr-Hdo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="g4Y-Uh-5gC"/>
+                    <constraint firstAttribute="bottom" secondItem="UCy-Q9-miX" secondAttribute="bottom" constant="8" id="guv-1B-BnX"/>
                     <constraint firstAttribute="bottom" secondItem="cjB-mr-Hdo" secondAttribute="bottom" constant="8" id="gzd-Zk-Ar6"/>
                     <constraint firstItem="cjB-mr-Hdo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="hpn-jO-lr8"/>
+                    <constraint firstAttribute="trailing" secondItem="UCy-Q9-miX" secondAttribute="trailing" constant="8" id="k0M-zq-fUP"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="backgroundViewForCell" destination="UCy-Q9-miX" id="N4Y-pe-jpm"/>
                 <outlet property="cellImage" destination="Qp3-i3-0qV" id="sAO-QR-gEM"/>
                 <outlet property="cellLabel" destination="OjN-je-0Wf" id="y5u-Y2-aag"/>
                 <outlet property="stackViewForCell" destination="cjB-mr-Hdo" id="9cW-qg-Jbu"/>

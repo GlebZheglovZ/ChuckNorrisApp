@@ -15,6 +15,7 @@ class JokeCell: UITableViewCell {
     @IBOutlet weak var cellImage: UIImageView!
     @IBOutlet weak var cellLabel: UILabel!
     @IBOutlet weak var stackViewForCell: UIStackView!
+    @IBOutlet weak var backgroundViewForCell: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,15 +31,24 @@ class JokeCell: UITableViewCell {
     
         self.cellLabel.alpha = 0
         self.cellImage.alpha = 0
+        self.backgroundViewForCell.alpha = 0
         
         UIView.animate(withDuration: 0.5) {
             self.cellImage.alpha = 1
             self.cellLabel.alpha = 1
+            self.backgroundViewForCell.alpha = 1
         }
     }
     
     func setupBackground() {
-        stackViewForCell.addBackground(color: .orange)
+        backgroundViewForCell.backgroundColor = .orange
+        backgroundViewForCell.clipsToBounds = true
+        backgroundViewForCell.layer.cornerRadius = 15
+        backgroundViewForCell.layer.shadowColor = UIColor.black.cgColor
+        backgroundViewForCell.layer.shadowOffset = CGSize(width: 1, height: 1)
+        backgroundViewForCell.layer.shadowOpacity = 1.0
+        backgroundViewForCell.layer.shadowRadius = 5
+        backgroundViewForCell.layer.masksToBounds = false
     }
 
 }
