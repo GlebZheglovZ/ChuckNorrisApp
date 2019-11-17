@@ -3,27 +3,45 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		118C3C2696806DAA69056A5B /* Pods_ChuckNorrisApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA01178A1D7C22B60FAD0A3 /* Pods_ChuckNorrisApp.framework */; };
+		540F075C238193DE0010643D /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540F075B238193DE0010643D /* BrowserViewController.swift */; };
+		540F075F238194000010643D /* JokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540F075D238194000010643D /* JokeCell.swift */; };
+		540F0760238194000010643D /* JokeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 540F075E238194000010643D /* JokeCell.xib */; };
 		5464420D237FF23F0070971F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5464420C237FF23F0070971F /* AppDelegate.swift */; };
-		5464420F237FF23F0070971F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5464420E237FF23F0070971F /* SceneDelegate.swift */; };
-		54644211237FF23F0070971F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54644210237FF23F0070971F /* ViewController.swift */; };
+		54644211237FF23F0070971F /* JokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54644210237FF23F0070971F /* JokesViewController.swift */; };
 		54644214237FF23F0070971F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54644212237FF23F0070971F /* Main.storyboard */; };
 		54644216237FF2420070971F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54644215237FF2420070971F /* Assets.xcassets */; };
 		54644219237FF2420070971F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54644217237FF2420070971F /* LaunchScreen.storyboard */; };
+		54A0BF002381949F007DB769 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BEFF2381949F007DB769 /* Reachability.swift */; };
+		54A0BF02238196D2007DB769 /* JokesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BF01238196D2007DB769 /* JokesModel.swift */; };
+		54A0BF0423819738007DB769 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BF0323819738007DB769 /* NetworkManger.swift */; };
+		54A0BF0623819FFE007DB769 /* Extension for String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BF0523819FFE007DB769 /* Extension for String.swift */; };
+		54B128212381A4F9001DC3D5 /* Extension for StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B128202381A4F9001DC3D5 /* Extension for StackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18D72ECA09CD36E731F3BFCA /* Pods-ChuckNorrisApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisApp.debug.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisApp/Pods-ChuckNorrisApp.debug.xcconfig"; sourceTree = "<group>"; };
+		540F075B238193DE0010643D /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
+		540F075D238194000010643D /* JokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeCell.swift; sourceTree = "<group>"; };
+		540F075E238194000010643D /* JokeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JokeCell.xib; sourceTree = "<group>"; };
 		54644209237FF23F0070971F /* ChuckNorrisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5464420C237FF23F0070971F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5464420E237FF23F0070971F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		54644210237FF23F0070971F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		54644210237FF23F0070971F /* JokesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewController.swift; sourceTree = "<group>"; };
 		54644213237FF23F0070971F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54644215237FF2420070971F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54644218237FF2420070971F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5464421A237FF2420070971F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54A0BEFF2381949F007DB769 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		54A0BF01238196D2007DB769 /* JokesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesModel.swift; sourceTree = "<group>"; };
+		54A0BF0323819738007DB769 /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
+		54A0BF0523819FFE007DB769 /* Extension for String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension for String.swift"; sourceTree = "<group>"; };
+		54B128202381A4F9001DC3D5 /* Extension for StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension for StackView.swift"; sourceTree = "<group>"; };
+		72CCF4A63A17DEFF41A982C1 /* Pods-ChuckNorrisApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisApp.release.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisApp/Pods-ChuckNorrisApp.release.xcconfig"; sourceTree = "<group>"; };
+		FDA01178A1D7C22B60FAD0A3 /* Pods_ChuckNorrisApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckNorrisApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,90 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118C3C2696806DAA69056A5B /* Pods_ChuckNorrisApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		540F0753238193300010643D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				54644210237FF23F0070971F /* JokesViewController.swift */,
+				540F075B238193DE0010643D /* BrowserViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		540F07542381933B0010643D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				54A0BF0523819FFE007DB769 /* Extension for String.swift */,
+				54B128202381A4F9001DC3D5 /* Extension for StackView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		540F0755238193400010643D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				54A0BF01238196D2007DB769 /* JokesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		540F0756238193450010643D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				540F075D238194000010643D /* JokeCell.swift */,
+				540F075E238194000010643D /* JokeCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		540F07572381934A0010643D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				54A0BF0323819738007DB769 /* NetworkManger.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		540F0758238193520010643D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54A0BEFF2381949F007DB769 /* Reachability.swift */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		540F0759238193570010643D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				54644215237FF2420070971F /* Assets.xcassets */,
+				5464420C237FF23F0070971F /* AppDelegate.swift */,
+				5464421A237FF2420070971F /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		540F075A2381935F0010643D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				54644217237FF2420070971F /* LaunchScreen.storyboard */,
+				54644212237FF23F0070971F /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		54644200237FF23F0070971F = {
 			isa = PBXGroup;
 			children = (
 				5464420B237FF23F0070971F /* ChuckNorrisApp */,
 				5464420A237FF23F0070971F /* Products */,
+				A349ADA7D2EDF34A6FB7356A /* Pods */,
+				DD271BECAE22576683F82AE3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +147,33 @@
 		5464420B237FF23F0070971F /* ChuckNorrisApp */ = {
 			isa = PBXGroup;
 			children = (
-				5464420C237FF23F0070971F /* AppDelegate.swift */,
-				5464420E237FF23F0070971F /* SceneDelegate.swift */,
-				54644210237FF23F0070971F /* ViewController.swift */,
-				54644212237FF23F0070971F /* Main.storyboard */,
-				54644215237FF2420070971F /* Assets.xcassets */,
-				54644217237FF2420070971F /* LaunchScreen.storyboard */,
-				5464421A237FF2420070971F /* Info.plist */,
+				540F0753238193300010643D /* Controllers */,
+				540F07542381933B0010643D /* Extensions */,
+				540F0758238193520010643D /* Frameworks */,
+				540F07572381934A0010643D /* Managers */,
+				540F0755238193400010643D /* Model */,
+				540F075A2381935F0010643D /* Storyboards */,
+				540F0759238193570010643D /* Supporting Files */,
+				540F0756238193450010643D /* Views */,
 			);
 			path = ChuckNorrisApp;
+			sourceTree = "<group>";
+		};
+		A349ADA7D2EDF34A6FB7356A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18D72ECA09CD36E731F3BFCA /* Pods-ChuckNorrisApp.debug.xcconfig */,
+				72CCF4A63A17DEFF41A982C1 /* Pods-ChuckNorrisApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DD271BECAE22576683F82AE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDA01178A1D7C22B60FAD0A3 /* Pods_ChuckNorrisApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5464421D237FF2420070971F /* Build configuration list for PBXNativeTarget "ChuckNorrisApp" */;
 			buildPhases = (
+				57C19E3EFD58F9CFE0EE39F5 /* [CP] Check Pods Manifest.lock */,
 				54644205237FF23F0070971F /* Sources */,
 				54644206237FF23F0070971F /* Frameworks */,
 				54644207237FF23F0070971F /* Resources */,
+				EA8EB5D320CC63C90537FA10 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,20 +238,69 @@
 			files = (
 				54644219237FF2420070971F /* LaunchScreen.storyboard in Resources */,
 				54644216237FF2420070971F /* Assets.xcassets in Resources */,
+				540F0760238194000010643D /* JokeCell.xib in Resources */,
 				54644214237FF23F0070971F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		57C19E3EFD58F9CFE0EE39F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChuckNorrisApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA8EB5D320CC63C90537FA10 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChuckNorrisApp/Pods-ChuckNorrisApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChuckNorrisApp/Pods-ChuckNorrisApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChuckNorrisApp/Pods-ChuckNorrisApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		54644205237FF23F0070971F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54644211237FF23F0070971F /* ViewController.swift in Sources */,
+				54A0BF0623819FFE007DB769 /* Extension for String.swift in Sources */,
+				54A0BF02238196D2007DB769 /* JokesModel.swift in Sources */,
+				54B128212381A4F9001DC3D5 /* Extension for StackView.swift in Sources */,
+				54644211237FF23F0070971F /* JokesViewController.swift in Sources */,
+				54A0BF0423819738007DB769 /* NetworkManger.swift in Sources */,
+				540F075C238193DE0010643D /* BrowserViewController.swift in Sources */,
+				540F075F238194000010643D /* JokeCell.swift in Sources */,
+				54A0BF002381949F007DB769 /* Reachability.swift in Sources */,
 				5464420D237FF23F0070971F /* AppDelegate.swift in Sources */,
-				5464420F237FF23F0070971F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +430,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -282,11 +442,13 @@
 		};
 		5464421E237FF2420070971F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18D72ECA09CD36E731F3BFCA /* Pods-ChuckNorrisApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YWR3FR3BGD;
-				INFOPLIST_FILE = ChuckNorrisApp/Info.plist;
+				INFOPLIST_FILE = "ChuckNorrisApp/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,17 +456,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = glebnikolaev.ChuckNorrisApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		5464421F237FF2420070971F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72CCF4A63A17DEFF41A982C1 /* Pods-ChuckNorrisApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YWR3FR3BGD;
-				INFOPLIST_FILE = ChuckNorrisApp/Info.plist;
+				INFOPLIST_FILE = "ChuckNorrisApp/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +476,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = glebnikolaev.ChuckNorrisApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
