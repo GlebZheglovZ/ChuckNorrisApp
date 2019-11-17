@@ -9,6 +9,8 @@
 import Foundation
 import SystemConfiguration
 
+// Framework for checking Internet Status Reachability
+
 final class Reachability {
     
         private init() { }

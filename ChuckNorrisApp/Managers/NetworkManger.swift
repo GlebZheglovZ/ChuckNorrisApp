@@ -11,6 +11,8 @@ import Alamofire
 
 class NetworkManager {
     
+    // MARK: - Fetch Jokes from icndb.com (Alamofire Realization)
+    
     func fetchJokes(numberOfJokes: String, completion: @escaping (Information?) -> Void) {
            let url = "http://api.icndb.com/jokes/random/\(numberOfJokes)"
            
@@ -43,7 +45,7 @@ class NetworkManager {
     
 }
 
-// MARK: Fetch Jokes from icndb.com (URL Session Realization)
+// MARK: - Fetch Jokes from icndb.com (URL Session Realization)
 
 /*
  

@@ -8,12 +8,12 @@
 
 import Foundation
 
-// MARK: - Information
+// MARK: - Information Model
 struct Information: Decodable {
     let value: [Joke]
 }
 
-// MARK: - Joke
+// MARK: - Joke Model
 struct Joke: Decodable {
     let joke: String
 }
