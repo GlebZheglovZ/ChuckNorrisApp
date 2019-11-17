@@ -31,8 +31,10 @@ extension JokesViewController {
     
     func setupButton() {
         loadButton.layer.cornerRadius = 15
+        loadButton.backgroundColor = .black
         loadButton.clipsToBounds = true
     }
+    
     func showAlertController(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
