@@ -20,7 +20,7 @@ Functionality of Application:
 
   - Fetching Data from API (http://www.icndb.com)
 
-  - Displays the received data /w Animations (UI)
+  - Display the received data /w Animations (UI)
 
 # Screenshots
 
