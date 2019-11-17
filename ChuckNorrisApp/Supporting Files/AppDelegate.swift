@@ -12,11 +12,28 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - Class Properties
+    
     var window: UIWindow?
     
     // MARK: - Application Settings
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        setupTabBar()
+        setupNavigationBar()
         return true
+    }
+    
+    // MARK: - Custom Methods
+    
+    func setupTabBar() {
+        UITabBar.appearance().barTintColor = .black
+        UITabBar.appearance().tintColor = .white
+    }
+    
+    func setupNavigationBar() {
+        UINavigationBar.appearance().backgroundColor = .black
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
     }
     
 }

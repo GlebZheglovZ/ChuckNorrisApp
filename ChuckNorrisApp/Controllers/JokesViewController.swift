@@ -34,10 +34,13 @@ class JokesViewController: UIViewController {
     // MARK: - UIViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupButton()
         setupTableView()
         setupTextField()
-        addKeyboardObservers()
         setupActivityIndicator()
+        
+        addKeyboardObservers()
         
         networkManager.fetchJokes(numberOfJokes: "1") { [weak self]
             (information) in
@@ -64,6 +67,8 @@ class JokesViewController: UIViewController {
     // MARK: - @IBActions
     
     @IBAction func loadJokes() {
+        
+        numberOfJokesTextField.resignFirstResponder()
         
         guard inputValidation() else { return }
         guard let numberOfJokes = numberOfJokesTextField.text else { return }
