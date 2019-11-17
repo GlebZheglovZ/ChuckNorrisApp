@@ -20,6 +20,7 @@
 		54A0BF02238196D2007DB769 /* JokesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BF01238196D2007DB769 /* JokesModel.swift */; };
 		54A0BF0423819738007DB769 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BF0323819738007DB769 /* NetworkManger.swift */; };
 		54A0BF0623819FFE007DB769 /* Extension for String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BF0523819FFE007DB769 /* Extension for String.swift */; };
+		54AAD65C2381ABEF00DE36BC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AAD65B2381ABEF00DE36BC /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		54A0BF01238196D2007DB769 /* JokesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesModel.swift; sourceTree = "<group>"; };
 		54A0BF0323819738007DB769 /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
 		54A0BF0523819FFE007DB769 /* Extension for String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension for String.swift"; sourceTree = "<group>"; };
+		54AAD65B2381ABEF00DE36BC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		72CCF4A63A17DEFF41A982C1 /* Pods-ChuckNorrisApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisApp.release.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisApp/Pods-ChuckNorrisApp.release.xcconfig"; sourceTree = "<group>"; };
 		FDA01178A1D7C22B60FAD0A3 /* Pods_ChuckNorrisApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckNorrisApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 		54644200237FF23F0070971F = {
 			isa = PBXGroup;
 			children = (
+				54AAD65B2381ABEF00DE36BC /* Default-568h@2x.png */,
 				5464420B237FF23F0070971F /* ChuckNorrisApp */,
 				5464420A237FF23F0070971F /* Products */,
 				A349ADA7D2EDF34A6FB7356A /* Pods */,
@@ -236,6 +239,7 @@
 				54644219237FF2420070971F /* LaunchScreen.storyboard in Resources */,
 				54644216237FF2420070971F /* Assets.xcassets in Resources */,
 				540F0760238194000010643D /* JokeCell.xib in Resources */,
+				54AAD65C2381ABEF00DE36BC /* Default-568h@2x.png in Resources */,
 				54644214237FF23F0070971F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

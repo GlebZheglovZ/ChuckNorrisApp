@@ -61,7 +61,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Jokes" id="1C8-8t-Rgr">
-                        <barButtonItem key="rightBarButtonItem" image="about" id="cK9-tf-bB2"/>
+                        <barButtonItem key="rightBarButtonItem" image="about" id="cK9-tf-bB2">
+                            <connections>
+                                <action selector="reportAProblem" destination="BYZ-38-t0r" id="VUA-HD-gGO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="wtj-yU-AOw" id="frB-Uh-9b7"/>
@@ -111,6 +115,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="l5L-7T-PLb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XyX-AG-aWd">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
