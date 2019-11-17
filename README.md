@@ -18,7 +18,7 @@ This application is created with third-party frameworks (Reachability / Alamofir
 
 Functionality of Application:
 
-  - Fetching Data from API
+  - Fetching Data from API (http://www.icndb.com)
 
   - Displays the received data /w Animations (UI)
 
