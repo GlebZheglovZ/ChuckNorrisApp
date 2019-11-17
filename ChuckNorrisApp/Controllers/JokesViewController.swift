@@ -35,51 +35,30 @@ class JokesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupTextField()
+        addKeyboardObservers()
         setupActivityIndicator()
-    }
-    
-    // MARK: - Custom Methods
-    func setupTableView() {
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.tableFooterView = UIView()
-        let nib = UINib(nibName: "JokeCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: JokeCell.reuseId)
-    }
-    
-    func setupActivityIndicator() {
-        activityIndicator.isHidden = true
-        activityIndicator.hidesWhenStopped = true
-    }
-    
-    func showAlertController(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
-        alertController.addAction(okAction)
-        present(alertController, animated: true)
-    }
-    
-    func toggleUI(_ isOn: Bool) {
-        tableView.isHidden = isOn
-        numberOfJokesTextField.isHidden = isOn
-        loadButton.isHidden = isOn
-        activityIndicator.isHidden = !isOn
-        activityIndicator.isHidden ? activityIndicator.stopAnimating() : activityIndicator.startAnimating()
-    }
-    
-    func inputValidation() -> Bool {
         
-        guard let unwrappedText = numberOfJokesTextField.text else {
-            showAlertController(title: "Error", message: "Fill The Number Of Jokes TextField")
-            return false
+        networkManager.fetchJokes(numberOfJokes: "1") { [weak self]
+            (information) in
+            
+            guard let information = information else {
+                
+                DispatchQueue.main.async {
+                    self?.toggleUI(false)
+                    self?.showAlertController(title: "Error", message: "Please try again later")
+                    return
+                }
+                
+                return
+            }
+            
+            self?.receivedJokes = information.value
         }
-        
-        guard let _ = Int(unwrappedText) else {
-            showAlertController(title: "Error", message: "Enter the correct number")
-            return false
-        }
-        
-        return true
+    }
+    
+    deinit {
+        removeKeyboardObservers()
     }
     
     // MARK: - @IBActions
@@ -88,6 +67,11 @@ class JokesViewController: UIViewController {
         
         guard inputValidation() else { return }
         guard let numberOfJokes = numberOfJokesTextField.text else { return }
+        
+        if !Reachability.checkInternetActivity() {
+            showAlertController(title: "Error", message: "Check your Internet Connection")
+            return
+        }
         
         toggleUI(true)
         
@@ -137,8 +121,6 @@ extension JokesViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension JokesViewController: MFMailComposeViewControllerDelegate {
     
-    //Реализация вызова MFMailComposeViewController'а при нажатии на BarButtonItem
-    
     @IBAction func reportAProblem() {
         
         if !MFMailComposeViewController.canSendMail() {
@@ -153,9 +135,26 @@ extension JokesViewController: MFMailComposeViewControllerDelegate {
         }
     }
     
-    //Выход из MFMailComposeViewController'а по завершению работы с ним
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         dismiss(animated: true)
+    }
+    
+}
+
+// MARK: - Extension (UITextFieldDelegate)
+
+extension JokesViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let currentText = textField.text ?? ""
+        guard let stringRange = Range(range, in: currentText) else { return false }
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+        return updatedText.count <= 4
     }
     
 }

@@ -25,6 +25,7 @@ class JokeCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.isUserInteractionEnabled = false
     }
     
     // MARK: - Custom Methods

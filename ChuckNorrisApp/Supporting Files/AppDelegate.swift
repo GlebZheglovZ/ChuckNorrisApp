@@ -11,6 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    // MARK: - Class Properties
     var window: UIWindow?
     
     // MARK: - Application Settings
