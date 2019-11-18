@@ -11,7 +11,6 @@ import Foundation
 extension String {
     
     // Special characters converter for &quot cases from icndb.com
-    
     func convertSpecialCharacters() -> String {
         var newString = self
         let charactersDictionary = [

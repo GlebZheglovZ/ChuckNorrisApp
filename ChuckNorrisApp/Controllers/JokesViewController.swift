@@ -12,7 +12,6 @@ import MessageUI
 class JokesViewController: UIViewController {
     
     // MARK: - Class Properties
-    
     var receivedJokes = [Joke]() {
         didSet {
             DispatchQueue.main.async {
@@ -25,7 +24,6 @@ class JokesViewController: UIViewController {
     let networkManager = NetworkManager()
     
     // MARK: - @IBOutlets
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loadButton: UIButton!
@@ -34,75 +32,93 @@ class JokesViewController: UIViewController {
     // MARK: - UIViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupButton()
-        setupTableView()
-        setupTextField()
-        setupKeyboard()
-        setupActivityIndicator()
-        
+        setupUI()
         addKeyboardObservers()
-        
-        networkManager.fetchJokes(numberOfJokes: "1") { [weak self]
-            (information) in
-            
-            guard let information = information else {
-                
-                DispatchQueue.main.async {
-                    self?.toggleUI(false)
-                    self?.showAlertController(title: "Error", message: "Please try again later")
-                    return
-                }
-                
-                return
-            }
-            
-            self?.receivedJokes = information.value
-        }
+        fetchJokesFromAPI(numberOfJokes: "1")
     }
     
     deinit {
         removeKeyboardObservers()
     }
     
-    // MARK: - @IBActions
-    
-    @IBAction func loadJokes() {
-        
-        numberOfJokesTextField.resignFirstResponder()
-        
-        guard inputValidation() else { return }
-        guard let numberOfJokes = numberOfJokesTextField.text else { return }
-        
-        if !Reachability.checkInternetActivity() {
-            showAlertController(title: "Error", message: "Check your Internet Connection")
-            return
-        }
-        
-        toggleUI(true)
-        
+    // Network Request From API
+    func fetchJokesFromAPI(numberOfJokes: String) {
         networkManager.fetchJokes(numberOfJokes: numberOfJokes) { [weak self]
             (information) in
-            
             guard let information = information else {
-                
                 DispatchQueue.main.async {
                     self?.toggleUI(false)
                     self?.showAlertController(title: "Error", message: "Please try again later")
                     return
                 }
-                
                 return
             }
-            
             self?.receivedJokes = information.value
         }
+    }
+    
+    // Actions Methods
+    func showAlertController(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(okAction)
+        present(alertController, animated: true)
+    }
+    
+    func toggleUI(_ isOn: Bool) {
+        tableView.isHidden = isOn
+        numberOfJokesTextField.isHidden = isOn
+        loadButton.isHidden = isOn
+        activityIndicator.isHidden = !isOn
+        activityIndicator.isHidden ? activityIndicator.stopAnimating() : activityIndicator.startAnimating()
+    }
+    
+    func inputValidation() -> Bool {
+        guard let unwrappedText = numberOfJokesTextField.text else {
+            showAlertController(title: "Error", message: "Fill The Number Of Jokes TextField")
+            return false
+        }
+        guard let _ = Int(unwrappedText) else {
+            showAlertController(title: "Error", message: "Enter the correct number")
+            return false
+        }
+        return true
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+    
+    @objc func doneClicked() {
+        view.endEditing(true)
+    }
+    
+    // MARK: - @IBActions
+    @IBAction func loadJokes() {
+        numberOfJokesTextField.resignFirstResponder()
+        guard inputValidation() else { return }
+        guard let numberOfJokes = numberOfJokesTextField.text else { return }
+        if !Reachability.checkInternetActivity() {
+            showAlertController(title: "Error", message: "Check your Internet Connection")
+            return
+        }
+        toggleUI(true)
+        fetchJokesFromAPI(numberOfJokes: numberOfJokes)
     }
     
 }
 
 // MARK: - Extension (UITableViewDataSource/UITableViewDelegate)
-
 extension JokesViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -124,11 +140,9 @@ extension JokesViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 // MARK: - Extension (MFMailComposeViewControllerDelegate)
-
 extension JokesViewController: MFMailComposeViewControllerDelegate {
     
     @IBAction func reportAProblem() {
-        
         if !MFMailComposeViewController.canSendMail() {
             showAlertController(title: "Error", message: "Please set up an email account \nto give feedback")
         } else {
@@ -148,7 +162,6 @@ extension JokesViewController: MFMailComposeViewControllerDelegate {
 }
 
 // MARK: - Extension (UITextFieldDelegate)
-
 extension JokesViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -16,12 +16,12 @@
 		54644214237FF23F0070971F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54644212237FF23F0070971F /* Main.storyboard */; };
 		54644216237FF2420070971F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54644215237FF2420070971F /* Assets.xcassets */; };
 		54644219237FF2420070971F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54644217237FF2420070971F /* LaunchScreen.storyboard */; };
-		54A0BF002381949F007DB769 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BEFF2381949F007DB769 /* Reachability.swift */; };
+		54A0BF002381949F007DB769 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BEFF2381949F007DB769 /* ReachabilityManager.swift */; };
 		54A0BF02238196D2007DB769 /* JokesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BF01238196D2007DB769 /* JokesModel.swift */; };
 		54A0BF0423819738007DB769 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BF0323819738007DB769 /* NetworkManger.swift */; };
 		54A0BF0623819FFE007DB769 /* Extension for String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BF0523819FFE007DB769 /* Extension for String.swift */; };
 		54AAD65C2381ABEF00DE36BC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AAD65B2381ABEF00DE36BC /* Default-568h@2x.png */; };
-		54AAD6822381C74800DE36BC /* JokesVC plus Custom Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AAD6812381C74800DE36BC /* JokesVC plus Custom Methods.swift */; };
+		54AAD6822381C74800DE36BC /* JokesVC + UI Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AAD6812381C74800DE36BC /* JokesVC + UI Methods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,12 +36,12 @@
 		54644215237FF2420070971F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54644218237FF2420070971F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5464421A237FF2420070971F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		54A0BEFF2381949F007DB769 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		54A0BEFF2381949F007DB769 /* ReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		54A0BF01238196D2007DB769 /* JokesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesModel.swift; sourceTree = "<group>"; };
 		54A0BF0323819738007DB769 /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
 		54A0BF0523819FFE007DB769 /* Extension for String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension for String.swift"; sourceTree = "<group>"; };
 		54AAD65B2381ABEF00DE36BC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		54AAD6812381C74800DE36BC /* JokesVC plus Custom Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JokesVC plus Custom Methods.swift"; sourceTree = "<group>"; };
+		54AAD6812381C74800DE36BC /* JokesVC + UI Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JokesVC + UI Methods.swift"; sourceTree = "<group>"; };
 		72CCF4A63A17DEFF41A982C1 /* Pods-ChuckNorrisApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisApp.release.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisApp/Pods-ChuckNorrisApp.release.xcconfig"; sourceTree = "<group>"; };
 		FDA01178A1D7C22B60FAD0A3 /* Pods_ChuckNorrisApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckNorrisApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,7 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				54A0BF0523819FFE007DB769 /* Extension for String.swift */,
-				54AAD6812381C74800DE36BC /* JokesVC plus Custom Methods.swift */,
+				54AAD6812381C74800DE36BC /* JokesVC + UI Methods.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -96,17 +96,10 @@
 		540F07572381934A0010643D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				54A0BEFF2381949F007DB769 /* ReachabilityManager.swift */,
 				54A0BF0323819738007DB769 /* NetworkManger.swift */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		540F0758238193520010643D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				54A0BEFF2381949F007DB769 /* Reachability.swift */,
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		540F0759238193570010643D /* Supporting Files */ = {
@@ -151,13 +144,12 @@
 			isa = PBXGroup;
 			children = (
 				540F0753238193300010643D /* Controllers */,
+				540F0756238193450010643D /* Views */,
 				540F07542381933B0010643D /* Extensions */,
-				540F0758238193520010643D /* Frameworks */,
 				540F07572381934A0010643D /* Managers */,
 				540F0755238193400010643D /* Model */,
 				540F075A2381935F0010643D /* Storyboards */,
 				540F0759238193570010643D /* Supporting Files */,
-				540F0756238193450010643D /* Views */,
 			);
 			path = ChuckNorrisApp;
 			sourceTree = "<group>";
@@ -302,9 +294,9 @@
 				54A0BF0423819738007DB769 /* NetworkManger.swift in Sources */,
 				540F075C238193DE0010643D /* BrowserViewController.swift in Sources */,
 				540F075F238194000010643D /* JokeCell.swift in Sources */,
-				54A0BF002381949F007DB769 /* Reachability.swift in Sources */,
+				54A0BF002381949F007DB769 /* ReachabilityManager.swift in Sources */,
 				5464420D237FF23F0070971F /* AppDelegate.swift in Sources */,
-				54AAD6822381C74800DE36BC /* JokesVC plus Custom Methods.swift in Sources */,
+				54AAD6822381C74800DE36BC /* JokesVC + UI Methods.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

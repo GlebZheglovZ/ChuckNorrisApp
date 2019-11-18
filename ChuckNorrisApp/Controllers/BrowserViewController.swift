@@ -11,12 +11,10 @@ import UIKit
 class BrowserViewController: UIViewController {
     
     // MARK: - @IBOutlets
-    
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - UIViewController Methods
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupActivityIndicator()
@@ -25,7 +23,6 @@ class BrowserViewController: UIViewController {
     }
     
     // MARK: - Custom Methods
-    
     func loadAPIDocs() {
         guard let url = URL(string: "http://www.icndb.com/api/") else { return }
         toggleUI(true)
@@ -38,20 +35,25 @@ class BrowserViewController: UIViewController {
         webView.scalesPageToFit = true
     }
     
+    func setupActivityIndicator() {
+        activityIndicator.isHidden = true
+        activityIndicator.hidesWhenStopped = true
+    }
+    
+    func setupUI() {
+        setupWebView()
+        setupActivityIndicator()
+    }
+    
     func toggleUI(_ isOn: Bool) {
         self.webView.isHidden = isOn
         self.activityIndicator.isHidden = !isOn
         isOn ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
     }
-    
-    func setupActivityIndicator() {
-        activityIndicator.isHidden = true
-        activityIndicator.hidesWhenStopped = true
-    }
+
 }
 
 // MARK: - Extension (UIWebViewDelegate)
-
 extension BrowserViewController: UIWebViewDelegate {
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
