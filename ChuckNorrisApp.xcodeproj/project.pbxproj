@@ -61,8 +61,8 @@
 		540F0753238193300010643D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				54644210237FF23F0070971F /* JokesViewController.swift */,
 				540F075B238193DE0010643D /* BrowserViewController.swift */,
+				54644210237FF23F0070971F /* JokesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -112,8 +112,8 @@
 		540F0759238193570010643D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				54644215237FF2420070971F /* Assets.xcassets */,
 				5464420C237FF23F0070971F /* AppDelegate.swift */,
+				54644215237FF2420070971F /* Assets.xcassets */,
 				5464421A237FF2420070971F /* Info.plist */,
 			);
 			path = "Supporting Files";

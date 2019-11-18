@@ -11,6 +11,7 @@ import UIKit
 extension JokesViewController {
     
     // MARK: - Custom Methods
+    
     func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
@@ -51,17 +52,14 @@ extension JokesViewController {
     }
     
     func inputValidation() -> Bool {
-        
         guard let unwrappedText = numberOfJokesTextField.text else {
             showAlertController(title: "Error", message: "Fill The Number Of Jokes TextField")
             return false
         }
-        
         guard let _ = Int(unwrappedText) else {
             showAlertController(title: "Error", message: "Enter the correct number")
             return false
         }
-        
         return true
     }
     
