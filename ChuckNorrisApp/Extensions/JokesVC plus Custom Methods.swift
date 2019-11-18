@@ -86,4 +86,34 @@ extension JokesViewController {
             self.view.frame.origin.y = 0
         }
     }
+    
+    func createDoneButton() -> UIToolbar {
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let flexButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                                         target: nil,
+                                         action: nil)
+        
+        let doneButton = UIBarButtonItem(title: "Готово",
+                                         style: .done,
+                                         target: self,
+                                         action: #selector(self.doneClicked))
+        
+        doneButton.tintColor = .black
+        
+        toolBar.setItems([flexButton, doneButton],
+                         animated: false)
+        
+        return toolBar
+    }
+    
+    @objc func doneClicked() {
+        view.endEditing(true)
+    }
+    
+    func setupKeyboard() {
+        let done = createDoneButton()
+        numberOfJokesTextField.inputAccessoryView = done
+    }
 }

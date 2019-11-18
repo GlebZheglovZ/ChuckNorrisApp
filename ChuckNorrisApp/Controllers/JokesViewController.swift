@@ -38,6 +38,7 @@ class JokesViewController: UIViewController {
         setupButton()
         setupTableView()
         setupTextField()
+        setupKeyboard()
         setupActivityIndicator()
         
         addKeyboardObservers()
