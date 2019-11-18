@@ -14,16 +14,16 @@ class NetworkManager {
     // MARK: - Fetch Jokes from icndb.com (Alamofire Realization)
     
     func fetchJokes(numberOfJokes: String, completion: @escaping (Information?) -> Void) {
-           let url = "http://api.icndb.com/jokes/random/\(numberOfJokes)"
-           
-           Alamofire.request(url, method: .get, encoding: URLEncoding.default, headers: nil).responseData { (dataResponse) in
+        let url = "http://api.icndb.com/jokes/random/\(numberOfJokes)"
+        
+        Alamofire.request(url, method: .get, encoding: URLEncoding.default, headers: nil).responseData { (dataResponse) in
             
-               if let error = dataResponse.error {
-                   print("Error received requesting data: \(error.localizedDescription)")
-                   completion(nil)
-                   return
-               }
-               
+            if let error = dataResponse.error {
+                print("Error received requesting data: \(error.localizedDescription)")
+                completion(nil)
+                return
+            }
+            
             guard let data = dataResponse.data else {
                 print("Unable to get data")
                 completion(nil)
@@ -41,7 +41,6 @@ class NetworkManager {
             completion(decodedInformation)
         }
     }
-    
     
 }
 

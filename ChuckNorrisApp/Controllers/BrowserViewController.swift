@@ -51,6 +51,7 @@ class BrowserViewController: UIViewController {
 }
 
 // MARK: - Extension (UIWebViewDelegate)
+
 extension BrowserViewController: UIWebViewDelegate {
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
