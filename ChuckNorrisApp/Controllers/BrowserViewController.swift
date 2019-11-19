@@ -22,14 +22,7 @@ class BrowserViewController: UIViewController {
         loadAPIDocs()
     }
     
-    // MARK: - Custom Methods
-    func loadAPIDocs() {
-        guard let url = URL(string: "http://www.icndb.com/api/") else { return }
-        toggleUI(true)
-        let request = URLRequest(url: url)
-        webView.loadRequest(request)
-    }
-    
+    // MARK: - UI Setup Methods
     func setupWebView() {
         webView.delegate = self
         webView.scalesPageToFit = true
@@ -45,10 +38,18 @@ class BrowserViewController: UIViewController {
         setupActivityIndicator()
     }
     
+    // MARK: - Actions Methods
     func toggleUI(_ isOn: Bool) {
         self.webView.isHidden = isOn
         self.activityIndicator.isHidden = !isOn
         isOn ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
+    }
+    
+    func loadAPIDocs() {
+        guard let url = URL(string: "http://www.icndb.com/api/") else { return }
+        toggleUI(true)
+        let request = URLRequest(url: url)
+        webView.loadRequest(request)
     }
 
 }
