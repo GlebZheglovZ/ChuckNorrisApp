@@ -140,12 +140,12 @@
 		5464420B237FF23F0070971F /* ChuckNorrisApp */ = {
 			isa = PBXGroup;
 			children = (
+				540F0755238193400010643D /* Model */,
 				540F0753238193300010643D /* Controllers */,
 				540F0756238193450010643D /* Views */,
-				540F07542381933B0010643D /* Extensions */,
 				540F07572381934A0010643D /* Managers */,
-				540F0755238193400010643D /* Model */,
 				540F075A2381935F0010643D /* Storyboards */,
+				540F07542381933B0010643D /* Extensions */,
 				540F0759238193570010643D /* Supporting Files */,
 			);
 			path = ChuckNorrisApp;

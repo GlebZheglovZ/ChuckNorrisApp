@@ -211,7 +211,7 @@ extension JokesViewController {
         setupKeyboard()
         setupActivityIndicator()
     }
-
+    
 }
 
 // MARK: - Extension (Keyboard Setup)

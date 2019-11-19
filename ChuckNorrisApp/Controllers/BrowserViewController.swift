@@ -51,7 +51,7 @@ class BrowserViewController: UIViewController {
         let request = URLRequest(url: url)
         webView.loadRequest(request)
     }
-
+    
 }
 
 // MARK: - Extension (UIWebViewDelegate)
