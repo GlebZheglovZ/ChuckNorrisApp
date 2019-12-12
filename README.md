@@ -16,7 +16,7 @@ Developer: Nikolaev Gleb
 
 This application is created with third-party frameworks (Reachability / Alamofire)
 
-Unit Tests Included In Project
+Unit Tests included in project
 
 Functionality of Application:
 
