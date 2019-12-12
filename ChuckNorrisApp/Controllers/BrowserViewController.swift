@@ -17,8 +17,7 @@ class BrowserViewController: UIViewController {
     // MARK: - UIViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupActivityIndicator()
-        setupWebView()
+        setupUI()
         loadAPIDocs()
     }
     
@@ -41,7 +40,6 @@ class BrowserViewController: UIViewController {
     // MARK: - Actions Methods
     func toggleUI(_ isOn: Bool) {
         self.webView.isHidden = isOn
-        self.activityIndicator.isHidden = !isOn
         isOn ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
     }
     

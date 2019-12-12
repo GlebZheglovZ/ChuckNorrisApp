@@ -11,25 +11,21 @@ import UIKit
 class JokeCell: UITableViewCell {
     
     // MARK: - Class Properties
-    
     static let reuseId = "JokeCell"
     
     // MARK: - @IBOutlets
-    
     @IBOutlet weak var cellImage: UIImageView!
     @IBOutlet weak var cellLabel: UILabel!
     @IBOutlet weak var stackViewForCell: UIStackView!
     @IBOutlet weak var backgroundViewForCell: UIView!
-
-    // MARK: - UITableViewCell Methods
     
+    // MARK: - UITableViewCell Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         self.isUserInteractionEnabled = false
     }
     
     // MARK: - Custom Methods
-    
     func setupCell(with joke: Joke) {
         setupBackground()
         cellImage.image = UIImage(named: "chuck")
@@ -37,7 +33,6 @@ class JokeCell: UITableViewCell {
     }
     
     func applyAnimationForAppearing() {
-    
         self.cellLabel.alpha = 0
         self.cellImage.alpha = 0
         self.backgroundViewForCell.alpha = 0
@@ -59,5 +54,5 @@ class JokeCell: UITableViewCell {
         backgroundViewForCell.layer.shadowRadius = 5
         backgroundViewForCell.layer.masksToBounds = false
     }
-
+    
 }

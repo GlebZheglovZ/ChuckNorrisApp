@@ -13,7 +13,14 @@ struct Information: Decodable {
     let value: [Joke]
 }
 
+// MARK: - Equatable Protocol Methods for Information Model
+extension Information: Equatable {
+    static func == (lhs: Information, rhs: Information) -> Bool {
+        return lhs.value == rhs.value
+    }
+}
+
 // MARK: - Joke Model
-struct Joke: Decodable {
+struct Joke: Decodable, Equatable {
     let joke: String
 }

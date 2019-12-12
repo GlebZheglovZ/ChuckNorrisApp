@@ -129,7 +129,7 @@ extension JokesViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: JokeCell.reuseId) as! JokeCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: JokeCell.reuseId, for: indexPath) as! JokeCell
         let joke = receivedJokes[indexPath.row]
         cell.setupCell(with: joke)
         cell.applyAnimationForAppearing()

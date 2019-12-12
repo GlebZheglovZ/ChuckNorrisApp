@@ -11,23 +11,40 @@
 		540F075C238193DE0010643D /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540F075B238193DE0010643D /* BrowserViewController.swift */; };
 		540F075F238194000010643D /* JokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540F075D238194000010643D /* JokeCell.swift */; };
 		540F0760238194000010643D /* JokeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 540F075E238194000010643D /* JokeCell.xib */; };
+		544F376D23A174C100F6EA72 /* JokeCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544F376C23A174C100F6EA72 /* JokeCellTests.swift */; };
 		5464420D237FF23F0070971F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5464420C237FF23F0070971F /* AppDelegate.swift */; };
 		54644211237FF23F0070971F /* JokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54644210237FF23F0070971F /* JokesViewController.swift */; };
 		54644214237FF23F0070971F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54644212237FF23F0070971F /* Main.storyboard */; };
 		54644216237FF2420070971F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54644215237FF2420070971F /* Assets.xcassets */; };
 		54644219237FF2420070971F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54644217237FF2420070971F /* LaunchScreen.storyboard */; };
+		547ED22423A2C41300782C18 /* BrowserViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547ED22323A2C41300782C18 /* BrowserViewControllerTests.swift */; };
+		5495B7E4239D6B06003295E7 /* InformationModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5495B7E3239D6B06003295E7 /* InformationModelTests.swift */; };
+		5495B7E7239EC990003295E7 /* JokesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5495B7E6239EC990003295E7 /* JokesViewControllerTests.swift */; };
+		54A05CA9239BE22A00009BBA /* JokeModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A05CA8239BE22A00009BBA /* JokeModelTests.swift */; };
 		54A0BF002381949F007DB769 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BEFF2381949F007DB769 /* ReachabilityManager.swift */; };
 		54A0BF02238196D2007DB769 /* JokesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BF01238196D2007DB769 /* JokesModel.swift */; };
 		54A0BF0423819738007DB769 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BF0323819738007DB769 /* NetworkManger.swift */; };
 		54A0BF0623819FFE007DB769 /* Extension for String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0BF0523819FFE007DB769 /* Extension for String.swift */; };
 		54AAD65C2381ABEF00DE36BC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AAD65B2381ABEF00DE36BC /* Default-568h@2x.png */; };
+		54B5801223A101D900AE5CEA /* JokeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 540F075E238194000010643D /* JokeCell.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		54A05CAB239BE22A00009BBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54644201237FF23F0070971F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54644208237FF23F0070971F;
+			remoteInfo = ChuckNorrisApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		18D72ECA09CD36E731F3BFCA /* Pods-ChuckNorrisApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisApp.debug.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisApp/Pods-ChuckNorrisApp.debug.xcconfig"; sourceTree = "<group>"; };
 		540F075B238193DE0010643D /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
 		540F075D238194000010643D /* JokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeCell.swift; sourceTree = "<group>"; };
 		540F075E238194000010643D /* JokeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JokeCell.xib; sourceTree = "<group>"; };
+		544F376C23A174C100F6EA72 /* JokeCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeCellTests.swift; sourceTree = "<group>"; };
 		54644209237FF23F0070971F /* ChuckNorrisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5464420C237FF23F0070971F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54644210237FF23F0070971F /* JokesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +52,12 @@
 		54644215237FF2420070971F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54644218237FF2420070971F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5464421A237FF2420070971F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		547ED22323A2C41300782C18 /* BrowserViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewControllerTests.swift; sourceTree = "<group>"; };
+		5495B7E3239D6B06003295E7 /* InformationModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationModelTests.swift; sourceTree = "<group>"; };
+		5495B7E6239EC990003295E7 /* JokesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewControllerTests.swift; sourceTree = "<group>"; };
+		54A05CA6239BE22A00009BBA /* ChuckNorrisAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckNorrisAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54A05CA8239BE22A00009BBA /* JokeModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeModelTests.swift; sourceTree = "<group>"; };
+		54A05CAA239BE22A00009BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54A0BEFF2381949F007DB769 /* ReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		54A0BF01238196D2007DB769 /* JokesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesModel.swift; sourceTree = "<group>"; };
 		54A0BF0323819738007DB769 /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
@@ -50,6 +73,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				118C3C2696806DAA69056A5B /* Pods_ChuckNorrisApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54A05CA3239BE22A00009BBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,11 +148,20 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		544F376B23A174AA00F6EA72 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				544F376C23A174C100F6EA72 /* JokeCellTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		54644200237FF23F0070971F = {
 			isa = PBXGroup;
 			children = (
 				54AAD65B2381ABEF00DE36BC /* Default-568h@2x.png */,
 				5464420B237FF23F0070971F /* ChuckNorrisApp */,
+				54A05CA7239BE22A00009BBA /* ChuckNorrisAppTests */,
 				5464420A237FF23F0070971F /* Products */,
 				A349ADA7D2EDF34A6FB7356A /* Pods */,
 				DD271BECAE22576683F82AE3 /* Frameworks */,
@@ -133,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				54644209237FF23F0070971F /* ChuckNorrisApp.app */,
+				54A05CA6239BE22A00009BBA /* ChuckNorrisAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,6 +189,35 @@
 				540F0759238193570010643D /* Supporting Files */,
 			);
 			path = ChuckNorrisApp;
+			sourceTree = "<group>";
+		};
+		5495B7E5239EC974003295E7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5495B7E6239EC990003295E7 /* JokesViewControllerTests.swift */,
+				547ED22323A2C41300782C18 /* BrowserViewControllerTests.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		54A05CA7239BE22A00009BBA /* ChuckNorrisAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				544F376B23A174AA00F6EA72 /* View */,
+				5495B7E5239EC974003295E7 /* Controllers */,
+				54A05CB0239BE84F00009BBA /* Model */,
+				54A05CAA239BE22A00009BBA /* Info.plist */,
+			);
+			path = ChuckNorrisAppTests;
+			sourceTree = "<group>";
+		};
+		54A05CB0239BE84F00009BBA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				54A05CA8239BE22A00009BBA /* JokeModelTests.swift */,
+				5495B7E3239D6B06003295E7 /* InformationModelTests.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A349ADA7D2EDF34A6FB7356A /* Pods */ = {
@@ -190,6 +259,24 @@
 			productReference = 54644209237FF23F0070971F /* ChuckNorrisApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		54A05CA5239BE22A00009BBA /* ChuckNorrisAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54A05CAF239BE22A00009BBA /* Build configuration list for PBXNativeTarget "ChuckNorrisAppTests" */;
+			buildPhases = (
+				54A05CA2239BE22A00009BBA /* Sources */,
+				54A05CA3239BE22A00009BBA /* Frameworks */,
+				54A05CA4239BE22A00009BBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54A05CAC239BE22A00009BBA /* PBXTargetDependency */,
+			);
+			name = ChuckNorrisAppTests;
+			productName = ChuckNorrisAppTests;
+			productReference = 54A05CA6239BE22A00009BBA /* ChuckNorrisAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,6 +289,10 @@
 				TargetAttributes = {
 					54644208237FF23F0070971F = {
 						CreatedOnToolsVersion = 11.1;
+					};
+					54A05CA5239BE22A00009BBA = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 54644208237FF23F0070971F;
 					};
 				};
 			};
@@ -219,6 +310,7 @@
 			projectRoot = "";
 			targets = (
 				54644208237FF23F0070971F /* ChuckNorrisApp */,
+				54A05CA5239BE22A00009BBA /* ChuckNorrisAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,6 +325,14 @@
 				540F0760238194000010643D /* JokeCell.xib in Resources */,
 				54AAD65C2381ABEF00DE36BC /* Default-568h@2x.png in Resources */,
 				54644214237FF23F0070971F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54A05CA4239BE22A00009BBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54B5801223A101D900AE5CEA /* JokeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +396,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		54A05CA2239BE22A00009BBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5495B7E7239EC990003295E7 /* JokesViewControllerTests.swift in Sources */,
+				5495B7E4239D6B06003295E7 /* InformationModelTests.swift in Sources */,
+				547ED22423A2C41300782C18 /* BrowserViewControllerTests.swift in Sources */,
+				544F376D23A174C100F6EA72 /* JokeCellTests.swift in Sources */,
+				54A05CA9239BE22A00009BBA /* JokeModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		54A05CAC239BE22A00009BBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54644208237FF23F0070971F /* ChuckNorrisApp */;
+			targetProxy = 54A05CAB239BE22A00009BBA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		54644212237FF23F0070971F /* Main.storyboard */ = {
@@ -472,6 +592,48 @@
 			};
 			name = Release;
 		};
+		54A05CAD239BE22A00009BBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YWR3FR3BGD;
+				INFOPLIST_FILE = ChuckNorrisAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = glebnikolaev.ChuckNorrisAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChuckNorrisApp.app/ChuckNorrisApp";
+			};
+			name = Debug;
+		};
+		54A05CAE239BE22A00009BBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YWR3FR3BGD;
+				INFOPLIST_FILE = ChuckNorrisAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = glebnikolaev.ChuckNorrisAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChuckNorrisApp.app/ChuckNorrisApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -489,6 +651,15 @@
 			buildConfigurations = (
 				5464421E237FF2420070971F /* Debug */,
 				5464421F237FF2420070971F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54A05CAF239BE22A00009BBA /* Build configuration list for PBXNativeTarget "ChuckNorrisAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54A05CAD239BE22A00009BBA /* Debug */,
+				54A05CAE239BE22A00009BBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
