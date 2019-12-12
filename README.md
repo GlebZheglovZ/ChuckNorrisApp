@@ -16,6 +16,8 @@ Developer: Nikolaev Gleb
 
 This application is created with third-party frameworks (Reachability / Alamofire)
 
+Unit Tests Included In Project
+
 Functionality of Application:
 
   - Fetching Data from API (http://www.icndb.com)
