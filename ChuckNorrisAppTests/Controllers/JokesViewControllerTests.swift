@@ -104,13 +104,6 @@ class JokesViewControllerTests: XCTestCase {
         XCTAssertNotNil(cell)
     }
     
-    // Проверяем какую ячейку мы получаем в методе cellForRowAtIndexPath
-    // Мы проверяем что метод CellForRowAtIndexPath возвращает именно JokeCell, а не какой то другой тип
-//    func testCellForRowAtIndexPathReturnsTaskCell() {
-//        createJokeAndAppendItToArrayWithReloadingData()
-//        XCTAssertTrue(cell is JokeCell)
-//    }
-    
     // Пишем тест который проверяет что cellForRowAtIndexPath переиспользует нашу ячейку
     func testCellForRowAtIndexPathDequeuesCellFromTableView() {
         let mockTableView = MockTableView.mockTableView(withDataSource: sut)

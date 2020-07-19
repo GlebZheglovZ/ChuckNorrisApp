@@ -11,10 +11,13 @@ import Alamofire
 
 class NetworkManager {
     
+    private let baseURL = "http://api.icndb.com/jokes/random/"
+    
     // MARK: - Fetch Jokes from icndb.com (Alamofire Realization)
     
     func fetchJokes(numberOfJokes: String, completion: @escaping (Information?) -> Void) {
-        let url = "http://api.icndb.com/jokes/random/\(numberOfJokes)"
+        guard var url = URL(string: baseURL) else { return }
+        url = url.appendingPathComponent(numberOfJokes)
         
         Alamofire.request(url, method: .get, encoding: URLEncoding.default, headers: nil).responseData { (dataResponse) in
             
@@ -43,49 +46,3 @@ class NetworkManager {
     }
     
 }
-
-// MARK: - Fetch Jokes from icndb.com (URL Session Realization)
-
-/*
- 
- func fetchJokes(numberOfJokes: String, completion: @escaping (Information?) -> Void) {
-     
-     guard var url = URL(string: "http://api.icndb.com/jokes/random/") else {
-         print("Invalid URL")
-         completion(nil)
-         return
-     }
-     
-     url.appendPathComponent(numberOfJokes)
-     
-     URLSession.shared.dataTask(with: url) { (data, response, error) in
-         
-         guard let data = data else {
-             print("Unable to get data")
-             completion(nil)
-             return
-         }
-         
-         guard let response = response as? HTTPURLResponse else {
-             print("Can't recognize response")
-             completion(nil)
-             return
-         }
-         
-         print("RESPONSE STATUS CODE: \(response.statusCode)")
-         
-         let jsonDecoder = JSONDecoder()
-         
-         guard let decodedInformation = try? jsonDecoder.decode(Information.self, from: data) else {
-             print("Failed to decode JSON data")
-             completion(nil)
-             return
-         }
-         
-         completion(decodedInformation)
-         
-     }.resume()
-     
- }
- 
- */
