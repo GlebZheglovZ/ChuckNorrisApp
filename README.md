@@ -14,13 +14,15 @@ Orientation: Portrait only
 
 Developer: Nikolaev Gleb
 
-This application is created with third-party frameworks (Reachability / Alamofire)
+This application is created with third-party frameworks (Alamofire)
 
 Unit Tests included in project
 
 Functionality of Application:
 
   - Fetching Data from API (http://www.icndb.com)
+  
+  - Saving jokes on device (Core Data)
 
   - Display the received data /w Animations (UI)
 
