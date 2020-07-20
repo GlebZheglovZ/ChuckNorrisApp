@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+import CoreData
 
 class JokesViewController: UIViewController {
     
@@ -21,6 +22,7 @@ class JokesViewController: UIViewController {
         }
     }
     
+    let coreDataContainer = AppDelegate.сontainer
     let networkManager = NetworkManager()
     
     // MARK: - @IBOutlets
@@ -34,7 +36,7 @@ class JokesViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         addKeyboardObservers()
-        fetchJokesFromAPI(numberOfJokes: "1")
+        loadJokesFromDB()
     }
     
     deinit {
@@ -58,6 +60,9 @@ class JokesViewController: UIViewController {
     func setupTextField() {
         numberOfJokesTextField.delegate = self
         numberOfJokesTextField.keyboardType = .numberPad
+        numberOfJokesTextField.textAlignment = .center
+        numberOfJokesTextField.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        numberOfJokesTextField.font = UIFont.boldSystemFont(ofSize: 17)
     }
     
     func setupButton() {
@@ -135,8 +140,7 @@ class JokesViewController: UIViewController {
     
     // MARK: - Fetch Requests
     func fetchJokesFromAPI(numberOfJokes: String) {
-        networkManager.fetchJokes(numberOfJokes: numberOfJokes) { [weak self]
-            (information) in
+        networkManager.fetchJokes(numberOfJokes: numberOfJokes) { [weak self] (information) in
             guard let information = information else {
                 DispatchQueue.main.async {
                     self?.toggleUI(false)
@@ -146,6 +150,37 @@ class JokesViewController: UIViewController {
                 return
             }
             self?.receivedJokes = information.value
+            self?.addJokesToDB(information.value)
+        }
+    }
+    
+    // MARK: - Core Data
+    func addJokesToDB(_ jokes: [Joke]) {
+        let request: NSFetchRequest<JokeEntity> = JokeEntity.fetchRequest()
+        guard let jokeEntities = try? coreDataContainer.viewContext.fetch(request) else { return }
+        
+        if !jokeEntities.isEmpty {
+            jokeEntities.forEach { (jokeEntity) in
+                coreDataContainer.viewContext.delete(jokeEntity)
+            }
+        }
+        
+        jokes.forEach { (joke) in
+            let jokeEntity = JokeEntity(context: coreDataContainer.viewContext)
+            jokeEntity.joke = joke.joke
+        }
+    }
+    
+    func loadJokesFromDB() {
+        let request: NSFetchRequest<JokeEntity> = JokeEntity.fetchRequest()
+        var jokes = [Joke]()
+        guard let jokeEntities = try? coreDataContainer.viewContext.fetch(request) else { return }
+        if !jokeEntities.isEmpty {
+            jokeEntities.forEach { (jokeEntity) in
+                let joke = Joke(joke: jokeEntity.joke ?? "")
+                jokes.append(joke)
+            }
+            receivedJokes = jokes
         }
     }
     

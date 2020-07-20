@@ -11,6 +11,8 @@
 		540F075C238193DE0010643D /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540F075B238193DE0010643D /* BrowserViewController.swift */; };
 		540F075F238194000010643D /* JokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540F075D238194000010643D /* JokeCell.swift */; };
 		540F0760238194000010643D /* JokeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 540F075E238194000010643D /* JokeCell.xib */; };
+		544EA48E24C606A4002FF632 /* Jokes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 544EA48C24C606A4002FF632 /* Jokes.xcdatamodeld */; };
+		544EA4B324C60A92002FF632 /* JokeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544EA4B224C60A92002FF632 /* JokeEntity.swift */; };
 		544F376D23A174C100F6EA72 /* JokeCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544F376C23A174C100F6EA72 /* JokeCellTests.swift */; };
 		5464420D237FF23F0070971F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5464420C237FF23F0070971F /* AppDelegate.swift */; };
 		54644211237FF23F0070971F /* JokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54644210237FF23F0070971F /* JokesViewController.swift */; };
@@ -43,6 +45,8 @@
 		540F075B238193DE0010643D /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
 		540F075D238194000010643D /* JokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeCell.swift; sourceTree = "<group>"; };
 		540F075E238194000010643D /* JokeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JokeCell.xib; sourceTree = "<group>"; };
+		544EA48D24C606A4002FF632 /* Jokes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jokes.xcdatamodel; sourceTree = "<group>"; };
+		544EA4B224C60A92002FF632 /* JokeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeEntity.swift; sourceTree = "<group>"; };
 		544F376C23A174C100F6EA72 /* JokeCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeCellTests.swift; sourceTree = "<group>"; };
 		54644209237FF23F0070971F /* ChuckNorrisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5464420C237FF23F0070971F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				54A0BF01238196D2007DB769 /* JokesModel.swift */,
+				544EA48C24C606A4002FF632 /* Jokes.xcdatamodeld */,
+				544EA4B224C60A92002FF632 /* JokeEntity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -384,10 +390,12 @@
 			files = (
 				54A0BF0623819FFE007DB769 /* String+ConvertSpecialChars.swift in Sources */,
 				54A0BF02238196D2007DB769 /* JokesModel.swift in Sources */,
+				544EA4B324C60A92002FF632 /* JokeEntity.swift in Sources */,
 				54644211237FF23F0070971F /* JokesViewController.swift in Sources */,
 				54A0BF0423819738007DB769 /* NetworkManger.swift in Sources */,
 				540F075C238193DE0010643D /* BrowserViewController.swift in Sources */,
 				540F075F238194000010643D /* JokeCell.swift in Sources */,
+				544EA48E24C606A4002FF632 /* Jokes.xcdatamodeld in Sources */,
 				5464420D237FF23F0070971F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -661,6 +669,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		544EA48C24C606A4002FF632 /* Jokes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				544EA48D24C606A4002FF632 /* Jokes.xcdatamodel */,
+			);
+			currentVersion = 544EA48D24C606A4002FF632 /* Jokes.xcdatamodel */;
+			path = Jokes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 54644201237FF23F0070971F /* Project object */;
 }
